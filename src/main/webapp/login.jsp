@@ -21,9 +21,17 @@
                 data: {loginName: loginName, password: password},
                 dataType: 'json',
                 success: function (data) {
-                    if (data.code == 200) {
-                        window.location.href = "/";
+                     {
+                        window.location.href = "/index.jsp";
                     }
+                    
+                },
+                error:function(data){
+                    alert("1");
+                    console.log(data);
+                    alert(data);
+                    
+                    
                 }
             });
         }
