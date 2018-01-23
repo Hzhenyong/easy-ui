@@ -1,41 +1,27 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jinkun
-  Date: 2017/4/21
-  Time: 11:48
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <%@include file="resources/common/header.jsp" %>
+    <script type="text/javascript" src="${ctx}/resources/js/login.js"></script>
+    <link rel="stylesheet" href="${ctx}/resources/css/login.css">
+
 </head>
+
 <body>
-<form class="form-horizontal">
-    <div class="control-group">
-        <label class="control-label" for="inputEmail">Email</label>
-        <div class="controls">
-            <input type="text" id="inputEmail" placeholder="Email">
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label" for="inputPassword">Password</label>
-        <div class="controls">
-            <input type="password" id="inputPassword" placeholder="Password">
-        </div>
-    </div>
-    <div class="control-group">
-        <div class="controls">
-            <label class="checkbox">
-                <input type="checkbox"> Remember me
-            </label>
-            <button type="submit" class="btn">Sign in</button>
-        </div>
-    </div>
-</form>
+ <div id="login" style="padding-left:6px">  
+        <p>管理员账号：<input class="easyui-textbox" type="text" id="loginName" name="loginName" value="" /></p>  
+        <p>管理员密码：<input class="easyui-passwordbox" type="password" id="password" name="password" value="" /></p>  
+    </div>  
+    <div id="btn">  
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-clear'" onclick="javascript:$('#login').dialog('close')">取消</a>  
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="">登陆</a>  
+    </div>  
 </body>
+
 </html>
+
+ 
